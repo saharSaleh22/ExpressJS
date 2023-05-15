@@ -1,0 +1,5 @@
+[
+  { "id": 1, "title": "Learn Node.js", "description": "Complete the Express.js course on Codecademy", "completed": false },
+  { "id": 2, "title": "Finish project", "description": "Complete the react project assigned by the instructor", "completed": false },
+  { "id": 3, "title": "learn firbase ", "description": "complete firebase couse for authntication", "completed": true }
+]

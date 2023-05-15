@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Todos List</title>
+</head>
+<body>
+  <h1>Todos List</h1>
+  <ul id="todos-list"></ul>
+  <img src="kk.jpg" alt="Server image"/>
+  <script>
+    // Fetch the list of todos from the server and display them as a list on the page
+    fetch('/todos')
+      .then(response => response.json())
+      .then(todos => {
+        const todosList = document.getElementById('todos-list');
+        todos.forEach(todo => {
+          const todoItem = document.createElement('li');
+          todoItem.innerHTML = `<strong>${todo.title}:</strong> ${todo.description}`;
+          todosList.appendChild(todoItem);
+        });
+      });
+  </script>
+</body>
+</html>
